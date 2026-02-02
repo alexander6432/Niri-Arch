@@ -21,3 +21,8 @@ telegram-desktop/
 user-dirs.dirs
 user-dirs.locale
 xsettingsd/
+kitty/current-theme.conf
+kitty/themes/noctalia.conf
+niri/noctalia.kdl
+noctalia/colors.json
+noctalia/settings.json
