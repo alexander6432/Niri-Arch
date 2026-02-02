@@ -1,0 +1,177 @@
+theme = "tokyonight_storm"
+
+[editor]
+scrolloff = 5
+mouse = true
+default-yank-register = '"'
+middle-click-paste = true
+scroll-lines = 5
+shell = ["sh", "-c"]
+line-number = "relative"
+cursorline = true
+cursorcolumn = false
+continue-comments = true
+# gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+auto-completion = true
+path-completion = true
+auto-format = true
+idle-timeout = 250
+completion-timeout = 250
+preview-completion-insert = false
+completion-trigger-len = 2
+completion-replace = true
+auto-info = true
+true-color = true
+undercurl = false
+rulers = []
+bufferline = "multiple"
+color-modes = true
+text-width = 120
+workspace-lsp-roots = []
+default-line-ending = "native"
+insert-final-newline = true
+atomic-save = true
+trim-final-newlines = true
+trim-trailing-whitespace = true
+popup-border = "all"
+indent-heuristic = "hybrid"
+jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
+end-of-line-diagnostics = "hint"
+clipboard-provider = "termcode"
+editor-config = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+  "spinner",
+]
+center = []
+right = [
+  "workspace-diagnostics",
+  "diagnostics",
+  "primary-selection-length",
+  "selections",
+  "register",
+  "position-percentage",
+  "position",
+  "total-line-numbers",
+  "file-encoding",
+]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["hint", "info", "warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-progress-messages = true
+auto-signature-help = true
+display-inlay-hints = true
+inlay-hints-length-limit = 40
+display-color-swatches = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+max-depth = 5
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+"'" = "'"
+
+[editor.auto-save]
+focus-lost = false
+after-delay.enable = false
+after-delay.timeout = 3000
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.indent-guides]
+render = true
+character = "│" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 0
+
+[editor.gutters]
+layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 20
+max-indent-retain = 40
+wrap-indicator = "↪"
+wrap-at-text-width = true
+
+[editor.smart-tab]
+enable = true
+supersede-menu = false
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+other-lines = "warning"
+prefix-len = 1
+max-wrap = 20
+max-diagnostics = 10
+
+[keys.normal]
+X = "extend_line_above"
+C-r = ":config-reload"
+
+[keys.normal.G]
+Q = ":buffer-close!"
+q = ":buffer-close"
+O = ":buffer-close-others!"
+o = ":buffer-close-others"
+n = ":buffer-next"
+p = ":buffer-previous"
+w = ":write-all"
+
+[keys.select]
+X = "extend_line_above"

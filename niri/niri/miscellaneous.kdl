@@ -1,0 +1,70 @@
+  /////////////////////
+ /// MISCELLANEOUS ///
+/////////////////////
+
+spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-sh-at-startup "swayidle"
+spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-sh-at-startup "~/.config/scripts/alert_battery.sh"
+prefer-no-csd
+screenshot-path "~/Imágenes/Capturas de pantalla/Captura_%Y-%m-%d %H-%M-%S.png"
+
+environment {
+    QT_QPA_PLATFORM "wayland;xcb"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+    QT_MEDIA_BACKEND "ffmpeg"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+
+    GDK_BACKEND "wayland,x11";
+    GDK_DPI_SCALE "1"
+    GDK_SCALE "1"
+    GSK_RENDERER "ngl"
+    CLUTTER_BACKEND "wayland"
+
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_DESKTOP "niri"
+
+    EDITOR "hx"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    SDL_VIDEODRIVER "wayland"
+    WLR_NO_HARDWARE_CURSORS "1"
+
+    NIXOS_OZONE_WL "1"
+    _JAVA_AWT_WM_NONREPARENTING "1"
+    WAYLAND_DISPLAY "wayland-1"
+    MOZ_ENABLE_WAYLAND "1"
+    // Remove a variable by using null as the value:
+    // DISPLAY null
+}
+
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
+    hide-when-typing
+    hide-after-inactive-ms 10000
+}
+
+overview {
+    zoom 0.5
+    backdrop-color "#777777"
+    workspace-shadow {
+        // off
+    }
+}
+
+xwayland-satellite {
+    // off
+    path "xwayland-satellite"
+}
+
+clipboard {
+    // disable-primary
+}
+
+hotkey-overlay {
+    skip-at-startup
+    // hide-not-bound
+    // disable-failed
+}

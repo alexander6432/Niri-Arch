@@ -1,0 +1,155 @@
+  //////////////
+ /// BLINDS ///
+//////////////
+
+binds {
+// =========
+// workspace
+// =========
+    Mod+1 hotkey-overlay-title="Ir al Espacio de Trabajo 1"{ focus-workspace 1; }
+    Mod+2 hotkey-overlay-title="Ir al Espacio de Trabajo 2"{ focus-workspace 2; }
+    Mod+3 hotkey-overlay-title="Ir al Espacio de Trabajo 3"{ focus-workspace 3; }
+    Mod+4 hotkey-overlay-title="Ir al Espacio de Trabajo 4"{ focus-workspace 4; }
+    Mod+5 hotkey-overlay-title="Ir al Espacio de Trabajo 5"{ focus-workspace 5; }
+    Mod+6 hotkey-overlay-title="Ir al Espacio de Trabajo 6"{ focus-workspace 6; }
+    Mod+7 hotkey-overlay-title="Ir al Espacio de Trabajo 7"{ focus-workspace 7; }
+    Mod+8 hotkey-overlay-title="Ir al Espacio de Trabajo 8"{ focus-workspace 8; }
+    Mod+9 hotkey-overlay-title="Ir al Espacio de Trabajo 9"{ focus-workspace 9; }
+
+    Mod+Shift+1 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 1"{ move-column-to-workspace 1; }
+    Mod+Shift+2 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 2"{ move-column-to-workspace 2; }
+    Mod+Shift+3 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 3"{ move-column-to-workspace 3; }
+    Mod+Shift+4 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 4"{ move-column-to-workspace 4; }
+    Mod+Shift+5 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 5"{ move-column-to-workspace 5; }
+    Mod+Shift+6 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 6"{ move-column-to-workspace 6; }
+    Mod+Shift+7 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 7"{ move-column-to-workspace 7; }
+    Mod+Shift+8 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 8"{ move-column-to-workspace 8; }
+    Mod+Shift+9 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 9"{ move-column-to-workspace 9; }
+
+    Mod+S       hotkey-overlay-title="Ir al Espacio de Trabajo Anterior"            { focus-workspace-down; }
+    Mod+A       hotkey-overlay-title="Ir al Espacio de Trabajo Siguiente"           { focus-workspace-up; }
+    Mod+Shift+S hotkey-overlay-title="Mover Ventana al Espacio de Trabajo Anterior" { move-window-to-workspace-down; }
+    Mod+Shift+A hotkey-overlay-title="Mover Ventana al Espacio de Trabajo Siguiente"{ move-window-to-workspace-up; }
+
+// ============
+// window focus
+// ============
+    Mod+Left  hotkey-overlay-title="Mover Ventana a la Izquierda" { focus-column-left; }
+    Mod+Down  hotkey-overlay-title="Mover Ventana hacia Abajo"    { focus-window-down; }
+    Mod+Up    hotkey-overlay-title="Mover Ventana hacia Arriba"   { focus-window-up; }
+    Mod+Right hotkey-overlay-title="Mover Ventana a la Derecha"   { focus-column-right; }
+
+    Mod+P hotkey-overlay-title="Enfocar Primmera Ventana" { focus-column-first; }
+    Mod+U hotkey-overlay-title="Enfocar Ultima Ventana"   { focus-column-last; }
+
+    Mod+C       hotkey-overlay-title="Enfocar Ventana al Centro"           { center-column; }
+    Mod+Shift+C hotkey-overlay-title="Enfocar Ventanas Visibles al Centro" { center-visible-columns; }
+
+// ===========
+// move window
+// ===========
+    Mod+Shift+Left  hotkey-overlay-title="Mover Ventana a la Izquierda" { move-column-left; }
+    Mod+Shift+Down  hotkey-overlay-title="Mover Ventana hacia Abajo"    { move-window-down; }
+    Mod+Shift+Up    hotkey-overlay-title="Mover Ventana hacia Arriba"   { move-window-up; }
+    Mod+Shift+Right hotkey-overlay-title="Mover Ventana a la Derecha"   { move-column-right; }
+
+    Mod+Shift+P hotkey-overlay-title="Mover Ventana al Principio" { move-column-to-first; }
+    Mod+Shift+U hotkey-overlay-title="Mover Ventana al Final"     { move-column-to-last; }
+
+// ==============
+// tabbed windows
+// ==============
+    Mod+T               hotkey-overlay-title="Alternar al modo Pestañas"                { toggle-column-tabbed-display; }
+    Mod+I               hotkey-overlay-title="Añadir o Expulsar Ventana a la Izquierda" { consume-or-expel-window-left; }
+    Mod+D               hotkey-overlay-title="Añadir o Expulsar Ventana a la Derecha"   { consume-or-expel-window-right; }
+    Mod+BackSpace       hotkey-overlay-title="Añadir Ventana"                           { consume-window-into-column; }
+    Mod+Shift+BackSpace hotkey-overlay-title="Expulsar Ventana"                         { expel-window-from-column; }
+
+// =============
+// resize window
+// =============
+    Mod+Minus       hotkey-overlay-title="Redimensionar Ventana Disminuir Ancho"  { set-column-width "-10%"; }
+    Mod+Plus        hotkey-overlay-title="Redimensionar Ventana Aumentar Ancho"   { set-column-width "+10%"; }
+    Mod+Shift+Minus hotkey-overlay-title="Redimensionar Ventana Disminuir Altura" { set-window-height "-10%"; }
+    Mod+Shift+Plus  hotkey-overlay-title="Redimensionar Ventana Aumentar Altura"  { set-window-height "+10%"; }
+
+    Mod+TouchpadScrollLeft  hotkey-overlay-title="Redimensionar Ventana Disminuir Ancho"  { set-column-width "-1%"; }
+    Mod+TouchpadScrollRight hotkey-overlay-title="Redimensionar Ventana Aumentar Ancho"   { set-column-width "+1%"; }
+    Mod+TouchpadScrollDown  hotkey-overlay-title="Redimensionar Ventana Disminuir Altura" { set-window-height "-1%"; }
+    Mod+TouchpadScrollUp    hotkey-overlay-title="Redimensionar Ventana Aumentar Altura"  { set-window-height "+1%"; }
+
+    Mod+R       hotkey-overlay-title="Redimensionar Ancho Ventana"  { switch-preset-column-width; }
+    Mod+Shift+R hotkey-overlay-title="Redimensionar Altura Ventana" { switch-preset-window-height; }
+    Mod+Ctrl+R  hotkey-overlay-title="Resetear Altura Ventana"      { reset-window-height; }
+
+    Mod+M       hotkey-overlay-title="Maximizar Ventana" { maximize-column; }
+    Mod+Shift+M hotkey-overlay-title="Pantalla Completa" { fullscreen-window; }
+    Mod+Ctrl+M  hotkey-overlay-title="Expandir Ventana"  { expand-column-to-available-width; }
+
+// ========
+// floating
+// ========
+    Mod+F       hotkey-overlay-title="Ventana Flotante"         { toggle-window-floating; }
+    Mod+Shift+F hotkey-overlay-title="Ignorar Ventana Flotante" { switch-focus-between-floating-and-tiling; }
+
+// =============
+// miscellaneous
+// =============
+    Mod+F1           hotkey-overlay-title="Buscar atajos"                      repeat=false { spawn-sh "kitty --class niri-keys-search ~/.config/scripts/atajos_niri.sh"; }
+    Mod+Home         hotkey-overlay-title="Centro de Control"                  repeat=false { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+Escape       hotkey-overlay-title="Abrir: Vista General"               repeat=false { toggle-overview; }
+    Mod+Q            hotkey-overlay-title="Cerrar Ventana"                     repeat=false { close-window; }
+    Mod+Shift+Escape hotkey-overlay-title="Salir de Niri"                                   { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+F4           hotkey-overlay-title="Alternar IDLE"                      repeat=false { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
+    Mod+E           hotkey-overlay-title="Cambiar Fondo de Pantalla"           repeat=false { spawn-sh "qs -c noctalia-shell ipc call wallpaper random"; }
+    Mod+Shift+E     hotkey-overlay-title="Abrir Selector de Fondo de Pantalla" repeat=false { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+    Mod+X           hotkey-overlay-title="Alternar Barra de Estado"            repeat=false { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
+
+// ============
+// applications
+// ============
+    Mod+Return  hotkey-overlay-title="Abrir: Terminal Kitty"               { spawn-sh "kitty fish"; }
+    Mod+Space   hotkey-overlay-title="Abrir: Lanzador de Aplicaciones"     { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+B       hotkey-overlay-title="Bloquear Pantalla"                   { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Z       hotkey-overlay-title="Abrir: Google Chrome"                { spawn "google-chrome-stable"; }
+    Mod+Shift+Z hotkey-overlay-title="Abrir: Firefox"                      { spawn "firefox"; }
+    Mod+N       hotkey-overlay-title="Abrir: Centro de Notificaciones"     { spawn-sh  "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+Shift+N hotkey-overlay-title="Limpiar Historial de Notificaciones" { spawn-sh  "qs -c noctalia-shell ipc call notifications clear"; }
+
+// ==========
+// multimedia
+// ==========
+    XF86AudioRaiseVolume hotkey-overlay-title="Subir Volumen"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase" ; }
+    XF86AudioLowerVolume hotkey-overlay-title="Bajar Volumen"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioMute        hotkey-overlay-title="Silenciar Volumen"   allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    XF86AudioMicMute     hotkey-overlay-title="Silenciar Microfono" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+
+    XF86MonBrightnessUp   hotkey-overlay-title="Subir Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown hotkey-overlay-title="Bajar Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+
+    XF86AudioPlay  hotkey-overlay-title="Reproducir Multimedia" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media play"; }
+    XF86AudioPause hotkey-overlay-title="Pausar Multimedia"     allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media pause"; }
+    XF86AudioStop  hotkey-overlay-title="Detener Multimedia"    allow-when-locked=true { spawn-sh "~/.config/scripts/multimedia_control.sh media-stop"; }
+    XF86AudioPrev  hotkey-overlay-title="Pista Anterior"        allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+    XF86AudioNext  hotkey-overlay-title="Pista Siguiente"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+
+    Print       hotkey-overlay-title="Capturar Ventana"       { screenshot-window; }
+    Shift+Print hotkey-overlay-title="Capturar Pantalla"      { screenshot-screen; }
+    Ctrl+Print  hotkey-overlay-title="Capturar por Seleccion" { screenshot; }
+
+}
+
+  //////////////////////
+ /// RECENT WINDOWS ///
+//////////////////////
+
+recent-windows {
+
+    binds {
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+U00BA       { next-window     filter="app-id"; }
+        Mod+Shift+U00BA { previous-window filter="app-id"; }
+    }
+
+}

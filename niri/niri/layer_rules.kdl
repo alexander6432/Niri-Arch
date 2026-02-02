@@ -1,0 +1,9 @@
+  ///////////////////
+ /// LAYER-RULES ///
+///////////////////
+
+// Set the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}

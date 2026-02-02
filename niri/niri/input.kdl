@@ -1,0 +1,56 @@
+  /////////////
+ /// INPUT ///
+/////////////
+
+input {
+    keyboard {
+        xkb {
+            layout "es"
+        }
+        repeat-delay 300
+        repeat-rate 40
+        track-layout "global"
+    }
+
+    touchpad {
+        // off
+        accel-speed 0.0
+        accel-profile "adaptive"
+        tap
+        scroll-method "two-finger"
+        // scroll-button-lock
+        dwt
+        dwtp
+        // disabled-on-external-mouse
+        drag true
+        scroll-factor horizontal=1.0 vertical=-1.0
+    }
+
+    mouse {
+        // off
+        accel-speed 0.0
+        accel-profile "flat"
+        scroll-factor horizontal=1.0 vertical=-1.0
+    }
+
+    tablet {
+        // off
+        map-to-output "eDP-1"
+        left-handed
+        // calibration-matrix 1.0 0.0 0.0 0.0 1.0 0.0
+    }
+
+    trackpoint {
+        off
+    }
+
+    trackball {
+        off
+    }
+
+    warp-mouse-to-focus mode="center-xy"
+    focus-follows-mouse
+    workspace-auto-back-and-forth
+    mod-key "Super"
+    mod-key-nested "Alt"
+}

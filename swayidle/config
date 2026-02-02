@@ -1,0 +1,25 @@
+# ===============================
+# Archivo: ~/.config/swayidle/config
+# Configuración de swayidle para Niri con Noctalia
+#
+# IMPORTANTE: La sintaxis es idéntica a los argumentos de línea de comandos,
+# pero SIN las barras invertidas (\) de continuación de línea.
+# ===============================
+
+# Reducir brillo después de 5 minutos (300 segundos)
+timeout 300 'brightnessctl -s set 10' resume 'brightnessctl -r'
+
+# Bloquear pantalla después de 10 minutos (600 segundos)
+timeout 600 'sh -c "qs -c noctalia-shell ipc call lockScreen lock && playerctl pause"' resume 'playerctl play'
+
+# Apagar monitores después de 15 minutos (900 segundos)
+timeout 900 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'
+
+# Suspender sistema después de 30 minutos (1800 segundos)
+timeout 1800 'systemctl suspend'
+
+# Bloquear antes de suspender (cierre de tapa, suspensión manual, etc)
+before-sleep 'sh -c "qs -c noctalia-shell ipc call lockScreen lock && playerctl pause"'
+
+# Encender monitores y reanudar música al despertar
+after-resume 'sh -c "niri msg action power-on-monitors && playerctl play"'

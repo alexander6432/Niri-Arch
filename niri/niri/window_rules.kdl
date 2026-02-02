@@ -1,0 +1,52 @@
+  /////////////////////
+ /// WINDOWS RULES ///
+/////////////////////
+
+window-rule {
+    geometry-corner-radius 8 8 8 8
+    clip-to-geometry true
+    draw-border-with-background false
+}
+
+window-rule {
+    match is-active=false
+    opacity 0.90
+}
+
+window-rule {
+    match is-floating=false
+    tiled-state true
+}
+
+/-window-rule {
+    match is-floating=true
+    baba-is-float true
+}
+
+window-rule {
+    match app-id=r#"kitty"#
+    default-column-width { proportion 0.66; }
+}
+
+window-rule {
+    match app-id=r#"^niri-keys-search$"#
+    open-floating true
+    default-column-width { proportion 0.50; }
+    default-window-height { proportion 0.40; }
+}
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+    default-floating-position x=16 y=16 relative-to="top-right"
+}
+
+window-rule {
+    match app-id=r#"^org\.telegram\.desktop$"# title="^Visor multimedia$"
+    open-floating true
+    open-fullscreen false
+    default-floating-position x=8 y=8 relative-to="top-right"
+    default-column-width { proportion 0.48; }
+    default-window-height { proportion 0.48; }
+    opacity 1.0
+}

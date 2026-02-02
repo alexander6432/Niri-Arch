@@ -1,0 +1,14 @@
+  ///////////////
+ /// OUTPUTS ///
+///////////////
+
+output "eDP-1" {
+    // off
+    mode "1366x768@60.003"
+    scale 1.0
+    transform "normal"
+    position x=0 y=0
+    focus-at-startup
+    background-color "transparent"
+    backdrop-color "transparent"
+}

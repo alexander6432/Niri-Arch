@@ -1,0 +1,7 @@
+  ////////////////////////
+ /// NAMED WORKSPACES ///
+////////////////////////
+
+// workspace "default" {
+//     open-on-output "eDP-1"
+// }
