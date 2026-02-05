@@ -18,7 +18,7 @@ while true; do
     if [ "$bat" -le 10 ]; then
       notify-send "🪫 Batería crítica" "Nivel: $bat%" -u critical
       sleep 5
-    elif [ "$bat" -le 30 ]; then
+    elif [ "$bat" -le 25 ]; then
       notify-send --app-name Alerta_Bateria -u critical -u normal "🪫  Batería baja" "Nivel: $bat%" -u normal
       sleep 300
     else
