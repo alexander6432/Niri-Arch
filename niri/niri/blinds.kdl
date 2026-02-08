@@ -6,30 +6,31 @@ binds {
 // =========
 // workspace
 // =========
-    Mod+1 hotkey-overlay-title="Ir al Espacio de Trabajo 1"{ focus-workspace 1; }
-    Mod+2 hotkey-overlay-title="Ir al Espacio de Trabajo 2"{ focus-workspace 2; }
-    Mod+3 hotkey-overlay-title="Ir al Espacio de Trabajo 3"{ focus-workspace 3; }
-    Mod+4 hotkey-overlay-title="Ir al Espacio de Trabajo 4"{ focus-workspace 4; }
-    Mod+5 hotkey-overlay-title="Ir al Espacio de Trabajo 5"{ focus-workspace 5; }
-    Mod+6 hotkey-overlay-title="Ir al Espacio de Trabajo 6"{ focus-workspace 6; }
-    Mod+7 hotkey-overlay-title="Ir al Espacio de Trabajo 7"{ focus-workspace 7; }
-    Mod+8 hotkey-overlay-title="Ir al Espacio de Trabajo 8"{ focus-workspace 8; }
-    Mod+9 hotkey-overlay-title="Ir al Espacio de Trabajo 9"{ focus-workspace 9; }
+    Mod+1 hotkey-overlay-title="Ir al Espacio de Trabajo 1" { focus-workspace 1; }
+    Mod+2 hotkey-overlay-title="Ir al Espacio de Trabajo 2" { focus-workspace 2; }
+    Mod+3 hotkey-overlay-title="Ir al Espacio de Trabajo 3" { focus-workspace 3; }
+    Mod+4 hotkey-overlay-title="Ir al Espacio de Trabajo 4" { focus-workspace 4; }
+    Mod+5 hotkey-overlay-title="Ir al Espacio de Trabajo 5" { focus-workspace 5; }
+    Mod+6 hotkey-overlay-title="Ir al Espacio de Trabajo 6" { focus-workspace 6; }
+    Mod+7 hotkey-overlay-title="Ir al Espacio de Trabajo 7" { focus-workspace 7; }
+    Mod+8 hotkey-overlay-title="Ir al Espacio de Trabajo 8" { focus-workspace 8; }
+    Mod+9 hotkey-overlay-title="Ir al Espacio de Trabajo 9" { focus-workspace 9; }
 
-    Mod+Shift+1 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 1"{ move-column-to-workspace 1; }
-    Mod+Shift+2 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 2"{ move-column-to-workspace 2; }
-    Mod+Shift+3 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 3"{ move-column-to-workspace 3; }
-    Mod+Shift+4 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 4"{ move-column-to-workspace 4; }
-    Mod+Shift+5 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 5"{ move-column-to-workspace 5; }
-    Mod+Shift+6 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 6"{ move-column-to-workspace 6; }
-    Mod+Shift+7 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 7"{ move-column-to-workspace 7; }
-    Mod+Shift+8 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 8"{ move-column-to-workspace 8; }
-    Mod+Shift+9 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 9"{ move-column-to-workspace 9; }
+    Mod+S hotkey-overlay-title="Ir al Espacio de Trabajo Anterior"  { focus-workspace-down; }
+    Mod+A hotkey-overlay-title="Ir al Espacio de Trabajo Siguiente" { focus-workspace-up; }
 
-    Mod+S       hotkey-overlay-title="Ir al Espacio de Trabajo Anterior"            { focus-workspace-down; }
-    Mod+A       hotkey-overlay-title="Ir al Espacio de Trabajo Siguiente"           { focus-workspace-up; }
-    Mod+Shift+S hotkey-overlay-title="Mover Ventana al Espacio de Trabajo Anterior" { move-window-to-workspace-down; }
-    Mod+Shift+A hotkey-overlay-title="Mover Ventana al Espacio de Trabajo Siguiente"{ move-window-to-workspace-up; }
+    Mod+Shift+1 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 1" { move-column-to-workspace 1; }
+    Mod+Shift+2 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 2" { move-column-to-workspace 2; }
+    Mod+Shift+3 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 3" { move-column-to-workspace 3; }
+    Mod+Shift+4 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 4" { move-column-to-workspace 4; }
+    Mod+Shift+5 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 5" { move-column-to-workspace 5; }
+    Mod+Shift+6 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 6" { move-column-to-workspace 6; }
+    Mod+Shift+7 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 7" { move-column-to-workspace 7; }
+    Mod+Shift+8 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 8" { move-column-to-workspace 8; }
+    Mod+Shift+9 hotkey-overlay-title="Mover Ventana al Espacio de Trabajo 9" { move-column-to-workspace 9; }
+
+    Mod+Shift+S hotkey-overlay-title="Mover Ventana al Espacio de Trabajo Anterior"  { move-window-to-workspace-down; }
+    Mod+Shift+A hotkey-overlay-title="Mover Ventana al Espacio de Trabajo Siguiente" { move-window-to-workspace-up; }
 
 // ============
 // window focus
@@ -52,6 +53,11 @@ binds {
     Mod+Shift+Down  hotkey-overlay-title="Mover Ventana hacia Abajo"    { move-window-down; }
     Mod+Shift+Up    hotkey-overlay-title="Mover Ventana hacia Arriba"   { move-window-up; }
     Mod+Shift+Right hotkey-overlay-title="Mover Ventana a la Derecha"   { move-column-right; }
+
+    Mod+H hotkey-overlay-title="Mover Ventana a la Izquierda" { move-column-left; }
+    Mod+J hotkey-overlay-title="Mover Ventana hacia Abajo"    { move-window-down; }
+    Mod+K hotkey-overlay-title="Mover Ventana hacia Arriba"   { move-window-up; }
+    Mod+L hotkey-overlay-title="Mover Ventana a la Derecha"   { move-column-right; }
 
     Mod+Shift+P hotkey-overlay-title="Mover Ventana al Principio" { move-column-to-first; }
     Mod+Shift+U hotkey-overlay-title="Mover Ventana al Final"     { move-column-to-last; }
@@ -82,9 +88,9 @@ binds {
     Mod+Shift+R hotkey-overlay-title="Redimensionar Altura Ventana" { switch-preset-window-height; }
     Mod+Ctrl+R  hotkey-overlay-title="Resetear Altura Ventana"      { reset-window-height; }
 
-    Mod+M       hotkey-overlay-title="Maximizar Ventana" { maximize-column; }
-    Mod+Shift+M hotkey-overlay-title="Pantalla Completa" { fullscreen-window; }
-    Mod+Ctrl+M  hotkey-overlay-title="Expandir Ventana"  { expand-column-to-available-width; }
+    Mod+M       hotkey-overlay-title="Maximizar Ventana"       { maximize-column; }
+    Mod+Shift+M hotkey-overlay-title="Pantalla Completa"       { fullscreen-window; }
+    Mod+Ctrl+M  hotkey-overlay-title="Maximizar Ventana(Fake)" { toggle-windowed-fullscreen; }
 
 // ========
 // floating
@@ -95,26 +101,27 @@ binds {
 // =============
 // miscellaneous
 // =============
-    Mod+F1           hotkey-overlay-title="Buscar atajos"                      repeat=false { spawn-sh "kitty --class niri-keys-search ~/.config/scripts/atajos_niri.sh"; }
-    Mod+Home         hotkey-overlay-title="Centro de Control"                  repeat=false { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
-    Mod+Escape       hotkey-overlay-title="Abrir: Vista General"               repeat=false { toggle-overview; }
     Mod+Q            hotkey-overlay-title="Cerrar Ventana"                     repeat=false { close-window; }
-    Mod+Shift+Escape hotkey-overlay-title="Salir de Niri"                                   { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Escape       hotkey-overlay-title="Abrir: Vista General"               repeat=false { toggle-overview; }
+    Mod+Ctrl+Escape  hotkey-overlay-title="Forzar Salida de Niri"              repeat=false { quit; }
+    Mod+Shift+Escape hotkey-overlay-title="Salir de Niri"                      repeat=false { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Home         hotkey-overlay-title="Centro de Control"                  repeat=false { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
     Mod+F4           hotkey-overlay-title="Alternar IDLE"                      repeat=false { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
     Mod+E           hotkey-overlay-title="Cambiar Fondo de Pantalla"           repeat=false { spawn-sh "qs -c noctalia-shell ipc call wallpaper random"; }
     Mod+Shift+E     hotkey-overlay-title="Abrir Selector de Fondo de Pantalla" repeat=false { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
     Mod+X           hotkey-overlay-title="Alternar Barra de Estado"            repeat=false { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
+    Mod+B       hotkey-overlay-title="Bloquear Pantalla"                      { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+N       hotkey-overlay-title="Abrir: Centro de Notificaciones"        { spawn-sh  "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+Shift+N hotkey-overlay-title="Limpiar Historial de Notificaciones"    { spawn-sh  "qs -c noctalia-shell ipc call notifications clear"; }
 
 // ============
 // applications
 // ============
-    Mod+Return  hotkey-overlay-title="Abrir: Terminal Kitty"               { spawn-sh "kitty fish"; }
-    Mod+Space   hotkey-overlay-title="Abrir: Lanzador de Aplicaciones"     { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+B       hotkey-overlay-title="Bloquear Pantalla"                   { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-    Mod+Z       hotkey-overlay-title="Abrir: Google Chrome"                { spawn "google-chrome-stable"; }
-    Mod+Shift+Z hotkey-overlay-title="Abrir: Firefox"                      { spawn "firefox"; }
-    Mod+N       hotkey-overlay-title="Abrir: Centro de Notificaciones"     { spawn-sh  "qs -c noctalia-shell ipc call notifications toggleHistory"; }
-    Mod+Shift+N hotkey-overlay-title="Limpiar Historial de Notificaciones" { spawn-sh  "qs -c noctalia-shell ipc call notifications clear"; }
+    Mod+Return  hotkey-overlay-title="Abrir: Terminal Kitty"           { spawn-sh "kitty fish"; }
+    Mod+Z       hotkey-overlay-title="Abrir: Google Chrome"            { spawn "google-chrome-stable"; }
+    Mod+Shift+Z hotkey-overlay-title="Abrir: Firefox"                  { spawn "firefox"; }
+    Mod+F1      hotkey-overlay-title="Buscar atajos"      repeat=false { spawn-sh "kitty --class niri-keys-search ~/.config/scripts/atajos_niri.sh"; }
+    Mod+Space   hotkey-overlay-title="Abrir: Lanzador de Aplicaciones" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
 
 // ==========
 // multimedia
@@ -129,7 +136,7 @@ binds {
 
     XF86AudioPlay  hotkey-overlay-title="Reproducir Multimedia" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media play"; }
     XF86AudioPause hotkey-overlay-title="Pausar Multimedia"     allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media pause"; }
-    XF86AudioStop  hotkey-overlay-title="Detener Multimedia"    allow-when-locked=true { spawn-sh "~/.config/scripts/multimedia_control.sh media-stop"; }
+    XF86AudioStop  hotkey-overlay-title="Detener Multimedia"    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media stop"; }
     XF86AudioPrev  hotkey-overlay-title="Pista Anterior"        allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
     XF86AudioNext  hotkey-overlay-title="Pista Siguiente"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
 
