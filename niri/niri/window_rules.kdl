@@ -30,7 +30,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"kitty"#
-    default-column-width { proportion 0.66; }
+    default-column-width { proportion 0.67; }
 }
 
 window-rule {
