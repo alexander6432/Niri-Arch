@@ -10,16 +10,16 @@ layout {
 
     preset-column-widths {
         proportion 0.33
-        proportion 0.49
-        proportion 0.66
+        proportion 0.50
+        proportion 0.67
     }
 
     default-column-width {}
 
     preset-window-heights {
         proportion 0.25
-        proportion 0.49
-        proportion 0.74
+        proportion 0.50
+        proportion 0.75
         proportion 1.00
     }
 
@@ -52,12 +52,12 @@ layout {
         // off
         // hide-when-single-tab
         place-within-column
-        gap 4
-        width 4
+        gap 8
+        width 8
         length total-proportion=0.5
         position "left"
-        gaps-between-tabs 16
-        corner-radius 2
+        gaps-between-tabs 4
+        corner-radius 4
         active-gradient from="#004687" to="#00ffd2" angle=0 in="oklch shorter hue"
         inactive-gradient from="#888888" to="#444444" angle=0 in="oklch shorter hue"
         urgent-gradient from="#930000" to="#ffb4ab" angle=0 in="oklch shorter hue"
@@ -69,10 +69,10 @@ layout {
     }
 
     struts {
-        left 4
-        right 4
-        top 4
-        bottom 4
+        left 2
+        right 2
+        top 2
+        bottom 2
     }
 
     background-color "transparent"

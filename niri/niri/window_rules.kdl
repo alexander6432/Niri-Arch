@@ -10,7 +10,7 @@ window-rule {
 
 window-rule {
     match is-active=false
-    opacity 0.90
+    opacity 0.95
 }
 
 window-rule {
@@ -21,6 +21,11 @@ window-rule {
 /-window-rule {
     match is-floating=true
     baba-is-float true
+}
+
+/-window-rule {
+    match is-floating=true
+    opacity 1.0
 }
 
 window-rule {

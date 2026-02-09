@@ -43,7 +43,7 @@ binds {
     Mod+P hotkey-overlay-title="Enfocar Primmera Ventana" { focus-column-first; }
     Mod+U hotkey-overlay-title="Enfocar Ultima Ventana"   { focus-column-last; }
 
-    Mod+C       hotkey-overlay-title="Enfocar Ventana al Centro"           { center-column; }
+    Mod+C       hotkey-overlay-title="Enfocar Ventana al Centro"           { center-window; }
     Mod+Shift+C hotkey-overlay-title="Enfocar Ventanas Visibles al Centro" { center-visible-columns; }
 
 // ===========
@@ -88,9 +88,9 @@ binds {
     Mod+Shift+R hotkey-overlay-title="Redimensionar Altura Ventana" { switch-preset-window-height; }
     Mod+Ctrl+R  hotkey-overlay-title="Resetear Altura Ventana"      { reset-window-height; }
 
-    Mod+M       hotkey-overlay-title="Maximizar Ventana"       { maximize-column; }
-    Mod+Shift+M hotkey-overlay-title="Pantalla Completa"       { fullscreen-window; }
-    Mod+Ctrl+M  hotkey-overlay-title="Maximizar Ventana(Fake)" { toggle-windowed-fullscreen; }
+    Mod+M       hotkey-overlay-title="Maximizar Ventana"            { maximize-column; }
+    Mod+Shift+M hotkey-overlay-title="Pantalla Completa"            { fullscreen-window; }
+    Mod+Ctrl+M  hotkey-overlay-title="Maximizar Ventana Totalmente" { maximize-window-to-edges; }
 
 // ========
 // floating
