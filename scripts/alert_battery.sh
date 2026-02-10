@@ -56,7 +56,7 @@ while true; do
         notify-send --app-name Alerta_Bateria -u low "⚡ Batería casi llena" "Nivel: $bat%" -u normal
         last_charging_notify=$current_time
       fi
-    elif [ "$bat" -ge 85 ]; then
+    elif [ "$bat" -ge 90 ]; then
       # Cargando alto: notifica cada 10 minutos
       if [ $((current_time - last_charging_notify)) -ge 600 ]; then
         notify-send --app-name Alerta_Bateria -u normal "⚡ Cargando" "Nivel: $bat%" -u low

@@ -16,6 +16,7 @@ zoxide init fish | source
 
 # SUDO HELIX
 alias shx="sudo helix -c $HOME/.config/helix/config.toml"
+alias hx="helix"
 
 # SSH
 alias ssh-testgithub="ssh -T git@github.com"

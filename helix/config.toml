@@ -10,18 +10,18 @@ shell = ["sh", "-c"]
 line-number = "relative"
 cursorline = true
 cursorcolumn = false
-continue-comments = true
+continue-comments = false
 # gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 auto-completion = true
 path-completion = true
 auto-format = true
 idle-timeout = 250
 completion-timeout = 250
-preview-completion-insert = false
-completion-trigger-len = 2
+preview-completion-insert = true
+completion-trigger-len = 1
 completion-replace = true
 auto-info = true
-true-color = true
+true-color = false
 undercurl = false
 rulers = []
 bufferline = "multiple"
@@ -54,13 +54,12 @@ center = []
 right = [
   "workspace-diagnostics",
   "diagnostics",
-  "primary-selection-length",
   "selections",
   "register",
-  "position-percentage",
   "position",
+  "position-percentage",
   "total-line-numbers",
-  "file-encoding",
+
 ]
 separator = "│"
 mode.normal = "NORMAL"
@@ -96,7 +95,7 @@ ignore = true
 git-ignore = true
 git-global = true
 git-exclude = true
-max-depth = 5
+max-depth = 4
 
 [editor.auto-pairs]
 '(' = ')'
@@ -117,7 +116,7 @@ smart-case = true
 wrap-around = true
 
 [editor.whitespace.render]
-space = "none"
+space = "all"
 tab = "all"
 nbsp = "all"
 nnbsp = "all"
@@ -125,10 +124,10 @@ newline = "none"
 
 [editor.whitespace.characters]
 space = "·"
+tab = ""
 nbsp = "⍽"
 nnbsp = "␣"
-tab = "→"
-newline = "⏎"
+newline = ""
 tabpad = "·"
 
 [editor.indent-guides]
@@ -146,7 +145,7 @@ min-width = 1
 enable = true
 max-wrap = 20
 max-indent-retain = 40
-wrap-indicator = "↪"
+wrap-indicator = ""
 wrap-at-text-width = true
 
 [editor.smart-tab]
@@ -161,7 +160,7 @@ max-wrap = 20
 max-diagnostics = 10
 
 [keys.normal]
-X = "extend_line_above"
+C-x = "extend_line_above"
 C-r = ":config-reload"
 
 [keys.normal.G]
@@ -174,4 +173,4 @@ p = ":buffer-previous"
 w = ":write-all"
 
 [keys.select]
-X = "extend_line_above"
+C-x = "extend_line_above"
