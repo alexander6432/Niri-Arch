@@ -4,7 +4,6 @@
 
 spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-sh-at-startup "swayidle"
-spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup "~/.config/scripts/alert_battery.sh"
 prefer-no-csd
 screenshot-path "~/Imágenes/Capturas de pantalla/Captura_%Y-%m-%d %H-%M-%S.png"

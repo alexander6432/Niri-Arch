@@ -17,6 +17,7 @@ zoxide init fish | source
 # SUDO HELIX
 alias shx="sudo helix -c $HOME/.config/helix/config.toml"
 alias hx="helix"
+alias ventoywayland="sudo env WAYLAND_DISPLAY=wayland-1 XDG_RUNTIME_DIR=/run/user/1000 ventoygui"
 
 # SSH
 alias ssh-testgithub="ssh -T git@github.com"
