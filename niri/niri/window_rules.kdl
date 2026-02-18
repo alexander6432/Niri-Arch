@@ -43,6 +43,16 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
+    default-column-width { proportion 0.33; }
+    default-window-height { proportion 0.33; }
+    default-floating-position x=16 y=16 relative-to="top-right"
+}
+
+window-rule {
+    match app-id="" title="^Pantalla en pantalla$"
+    open-floating true
+    default-column-width { proportion 0.33; }
+    default-window-height { proportion 0.33; }
     default-floating-position x=16 y=16 relative-to="top-right"
 }
 
@@ -50,8 +60,12 @@ window-rule {
     match app-id=r#"^org\.telegram\.desktop$"# title="^Visor multimedia$"
     open-floating true
     open-fullscreen false
+    default-column-width { proportion 0.33; }
+    default-window-height { proportion 0.33; }
     default-floating-position x=8 y=8 relative-to="top-right"
-    default-column-width { proportion 0.48; }
-    default-window-height { proportion 0.48; }
-    opacity 1.0
+}
+
+window-rule {
+    match app-id=r#"^org.inkscape.Inkscape$"#
+    open-floating true
 }

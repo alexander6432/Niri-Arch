@@ -68,8 +68,8 @@ binds {
     Mod+T               hotkey-overlay-title="Alternar al modo Pestañas"                { toggle-column-tabbed-display; }
     Mod+I               hotkey-overlay-title="Añadir o Expulsar Ventana a la Izquierda" { consume-or-expel-window-left; }
     Mod+D               hotkey-overlay-title="Añadir o Expulsar Ventana a la Derecha"   { consume-or-expel-window-right; }
-    Mod+BackSpace       hotkey-overlay-title="Añadir Ventana"                           { consume-window-into-column; }
-    Mod+Shift+BackSpace hotkey-overlay-title="Expulsar Ventana"                         { expel-window-from-column; }
+    Mod+Backspace       hotkey-overlay-title="Añadir Ventana"                           { consume-window-into-column; }
+    Mod+Shift+Backspace hotkey-overlay-title="Expulsar Ventana"                         { expel-window-from-column; }
 
 // =============
 // resize window
@@ -79,10 +79,10 @@ binds {
     Mod+Shift+Minus hotkey-overlay-title="Redimensionar Ventana Disminuir Altura" { set-window-height "-10%"; }
     Mod+Shift+Plus  hotkey-overlay-title="Redimensionar Ventana Aumentar Altura"  { set-window-height "+10%"; }
 
-    Mod+TouchpadScrollLeft  hotkey-overlay-title="Redimensionar Ventana Disminuir Ancho"  { set-column-width "-1%"; }
-    Mod+TouchpadScrollRight hotkey-overlay-title="Redimensionar Ventana Aumentar Ancho"   { set-column-width "+1%"; }
-    Mod+TouchpadScrollDown  hotkey-overlay-title="Redimensionar Ventana Disminuir Altura" { set-window-height "-1%"; }
-    Mod+TouchpadScrollUp    hotkey-overlay-title="Redimensionar Ventana Aumentar Altura"  { set-window-height "+1%"; }
+    Mod+Touchpadscrollleft  hotkey-overlay-title="Redimensionar Ventana Disminuir Ancho"  { set-column-width "-1%"; }
+    Mod+Touchpadscrollright hotkey-overlay-title="Redimensionar Ventana Aumentar Ancho"   { set-column-width "+1%"; }
+    Mod+Touchpadscrolldown  hotkey-overlay-title="Redimensionar Ventana Disminuir Altura" { set-window-height "-1%"; }
+    Mod+Touchpadscrollup    hotkey-overlay-title="Redimensionar Ventana Aumentar Altura"  { set-window-height "+1%"; }
 
     Mod+R       hotkey-overlay-title="Redimensionar Ancho Ventana"  { switch-preset-column-width; }
     Mod+Shift+R hotkey-overlay-title="Redimensionar Altura Ventana" { switch-preset-window-height; }
@@ -95,8 +95,8 @@ binds {
 // ========
 // floating
 // ========
-    Mod+F       hotkey-overlay-title="Ventana Flotante"         { toggle-window-floating; }
-    Mod+Shift+F hotkey-overlay-title="Ignorar Ventana Flotante" { switch-focus-between-floating-and-tiling; }
+    Mod+F hotkey-overlay-title="Ventana Flotante"         { toggle-window-floating; }
+    Mod+W hotkey-overlay-title="Ignorar Ventana Flotante" { switch-focus-between-floating-and-tiling; }
 
 // =============
 // miscellaneous
@@ -126,19 +126,19 @@ binds {
 // ==========
 // multimedia
 // ==========
-    XF86AudioRaiseVolume hotkey-overlay-title="Subir Volumen"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase" ; }
-    XF86AudioLowerVolume hotkey-overlay-title="Bajar Volumen"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AudioMute        hotkey-overlay-title="Silenciar Volumen"   allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86AudioMicMute     hotkey-overlay-title="Silenciar Microfono" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    Xf86audioraisevolume hotkey-overlay-title="Subir Volumen"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase" ; }
+    Xf86audiolowervolume hotkey-overlay-title="Bajar Volumen"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    Xf86audiomute        hotkey-overlay-title="Silenciar Volumen"   allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    Xf86audiomicmute     hotkey-overlay-title="Silenciar Microfono" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
 
-    XF86MonBrightnessUp   hotkey-overlay-title="Subir Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-    XF86MonBrightnessDown hotkey-overlay-title="Bajar Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+    Xf86monbrightnessup   hotkey-overlay-title="Subir Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    Xf86monbrightnessdown hotkey-overlay-title="Bajar Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
-    XF86AudioPlay  hotkey-overlay-title="Reproducir Multimedia" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media play"; }
-    XF86AudioPause hotkey-overlay-title="Pausar Multimedia"     allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media pause"; }
-    XF86AudioStop  hotkey-overlay-title="Detener Multimedia"    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media stop"; }
-    XF86AudioPrev  hotkey-overlay-title="Pista Anterior"        allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
-    XF86AudioNext  hotkey-overlay-title="Pista Siguiente"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+    Xf86audioplay  hotkey-overlay-title="Reproducir Multimedia" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media play"; }
+    Xf86audiopause hotkey-overlay-title="Pausar Multimedia"     allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media pause"; }
+    Xf86audiostop  hotkey-overlay-title="Detener Multimedia"    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media stop"; }
+    Xf86audioprev  hotkey-overlay-title="Pista Anterior"        allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+    Xf86audionext  hotkey-overlay-title="Pista Siguiente"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
 
     Print       hotkey-overlay-title="Capturar Ventana"       { screenshot-window; }
     Shift+Print hotkey-overlay-title="Capturar Pantalla"      { screenshot-screen; }
@@ -153,10 +153,10 @@ binds {
 recent-windows {
 
     binds {
-        Mod+Tab         { next-window; }
-        Mod+Shift+Tab   { previous-window; }
-        Mod+U00BA       { next-window     filter="app-id"; }
-        Mod+Shift+U00BA { previous-window filter="app-id"; }
+        Mod+Tab         hotkey-overlay-title="Siguiente Ventana General"   { next-window; }
+        Mod+Shift+Tab   hotkey-overlay-title="Anterior Ventana General"    { previous-window; }
+        Mod+U00BA       hotkey-overlay-title="Siguiente Ventana de la App" { next-window     filter="app-id"; }
+        Mod+Shift+U00BA hotkey-overlay-title="Anterior Ventana de la App"  { previous-window filter="app-id"; }
     }
 
 }

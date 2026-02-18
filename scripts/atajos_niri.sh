@@ -1,56 +1,83 @@
 #!/bin/bash
-# ~/.local/bin/niri-keys-search
+# ~/.config/scripts/atajos_niri.sh
+
 grep 'hotkey-overlay-title' ~/.config/niri/niri/blinds.kdl | \
-    sed 's/^\s*//' | \
-    sed 's/hotkey-overlay-title=//g' | \
-    sed 's/"//g' | \
-    sed 's/allow-when-locked=true//g' | \
-    sed 's/allow-when-locked=false//g' | \
-    sed 's/repeat=true//g' | \
-    sed 's/repeat=false//g' | \
-    sed 's/{.*//' | \
-    sed 's/  \+/ /g' | \
-    sed 's/XF86AudioRaiseVolume/󰕾/g' | \
-    sed 's/XF86AudioLowerVolume/󰖀/g' | \
-    sed 's/XF86AudioMute/󰖁/g' | \
-    sed 's/XF86AudioMicMute/󰍭/g' | \
-    sed 's/XF86MonBrightnessUp/󰃞/g' | \
-    sed 's/XF86MonBrightnessDown/󰃠/g' | \
-    sed 's/XF86AudioPlay/󰐎/g' | \
-    sed 's/XF86AudioPause/󰐎/g' | \
-    sed 's/XF86AudioStop/󰓛/g' | \
-    sed 's/XF86AudioPrev/󰒫/g' | \
-    sed 's/XF86AudioNext/󰒬/g' | \
-    sed 's/Mod//g' | \
-    sed 's/Shift/󰘶/g' | \
-    sed 's/Return/󰌑/g' | \
-    sed 's/Up/󰚷/g' | \
-    sed 's/Left/󰨂/g' | \
-    sed 's/Right/󰨃/g' | \
-    sed 's/Down/󰚶/g' | \
-    sed 's/Up/󰚷/g' | \
-    sed 's/Left/󰨂/g' | \
-    sed 's/Right/󰨃/g' | \
-    sed 's/Print/ImprPant/g' | \
-    sed 's/BackSpace/󰌍/g' | \
-    sed 's/Space/󱁐/g' | \
-    sed 's/Escape/Esc/g' | \
-    sed 's/Minus/-/g' | \
-    sed 's/Plus/+/g' | \
-    sed 's/Home/Inicio/g' | \
-    sed 's/TouchpadScroll/Scroll/g' | \
-    sed 's/+/xxx/g' | \
-    awk '{
-        # Encuentra donde termina el keybind (primer espacio)
-        match($0, /^[^ ]+/)
-        keybind = substr($0, 1, RLENGTH)
-        desc = substr($0, RLENGTH+1)
-        gsub(/^[[:space:]]+|[[:space:]]+$/, "", desc)
-        printf "%-30s %s\n", keybind, desc
-    }' | \
-    sed 's/xxx/ + /g' | \
-    fzf --prompt="🔍 Buscar atajo: " \
-        --height=70% \
-        --border=rounded \
-        --preview-window=hidden \
-        --header='Busca por tecla o descripción'
+awk '
+  BEGIN {
+    # Símbolos especiales
+    sym["Xf86audiomicmute"]      = "󰍭"
+    sym["Xf86audiomute"]         = "󰖁"
+    sym["Xf86audionext"]         = "󰒬"
+    sym["Xf86audiopause"]        = "󰐎"
+    sym["Xf86audioplay"]         = "󰐎"
+    sym["Xf86audioprev"]         = "󰒫"
+    sym["Xf86audiostop"]         = "󰓛"
+    sym["Xf86audiolowervolume"]  = "󰖀"
+    sym["Xf86audioraisevolume"]  = "󰕾"
+    sym["Xf86monbrightnessdown"] = "󰃠"
+    sym["Xf86monbrightnessup"]   = "󰃞"
+    sym["Left"]                  = "󰨂"
+    sym["Right"]                 = "󰨃"
+    sym["Down"]                  = "󰚶"
+    sym["Up"]                    = "󰚷"
+    sym["Backspace"]             = "󰌍"
+    sym["Ctrl"]                  = "󰘴"
+    sym["Minus"]                 = "-"
+    sym["Mod"]                   = "󰖳"
+    sym["Plus"]                  = "+"
+    sym["Print"]                 = "󰹑"
+    sym["Return"]                = "󰌑"
+    sym["Shift"]                 = "󰘶"
+    sym["Space"]                 = "󱁐"
+    sym["Tab"]                   = "󰌒"
+    sym["U00BA"]                 = "º"
+    sym["Escape"]                = "󱊷"
+    sym["F1"]                    = "󱊫"
+    sym["F2"]                    = "󱊬"
+    sym["F3"]                    = "󱊭"
+    sym["F4"]                    = "󱊮"
+    sym["F5"]                    = "󱊯"
+    sym["F6"]                    = "󱊰"
+    sym["F7"]                    = "󱊱"
+    sym["F8"]                    = "󱊲"
+    sym["F9"]                    = "󱊳"
+    sym["F10"]                   = "󱊴"
+    sym["F11"]                   = "󱊵"
+    sym["F12"]                   = "󱊶"
+    sym["Home"]                  = "Inicio"
+    sym["Touchpadscrollleft"]    = "← Scroll"
+    sym["Touchpadscrollright"]   = "→ Scroll"
+    sym["Touchpadscrolldown"]    = "↓ Scroll"
+    sym["Touchpadscrollup"]      = "↑ Scroll"
+  }
+  {
+    # Extraer keybind (todo lo que está antes de hotkey-overlay-title)
+    if (!match($0, /hotkey-overlay-title="([^"]+)"/, m)) next
+
+    line = $0
+    gsub(/^[[:space:]]+/, "", line)
+
+    # Keybind es la primera palabra de la línea
+    split(line, parts, " ")
+    keybind = parts[1]
+    desc    = m[1]
+
+    # Aplicar sustituciones de símbolos al keybind
+    for (k in sym) {
+      gsub(k, sym[k], keybind)
+    }
+
+    # Separar los modificadores con " + "
+    gsub(/\+/, " + ", keybind)
+    gsub(/  +/, " ", keybind)
+
+    printf "%-40s %s\n", keybind, desc
+  }
+' | \
+fzf \
+  --prompt="󰍉 Buscar atajo: " \
+  --height=80% \
+  --border=rounded \
+  --preview-window=hidden \
+  --header="$(printf ' Atajos de Niri  |  󰖳 = Super  󰘶 = Shift  󰘴 = Ctrl\n')" \
+  --color='header:italic:yellow,prompt:cyan,pointer:magenta'
