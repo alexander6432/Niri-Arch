@@ -134,8 +134,7 @@ binds {
     Xf86monbrightnessup   hotkey-overlay-title="Subir Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
     Xf86monbrightnessdown hotkey-overlay-title="Bajar Brillo" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
-    Xf86audioplay  hotkey-overlay-title="Reproducir Multimedia" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media play"; }
-    Xf86audiopause hotkey-overlay-title="Pausar Multimedia"     allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media pause"; }
+    Xf86audioPlay  hotkey-overlay-title="Reproducir Multimedia" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
     Xf86audiostop  hotkey-overlay-title="Detener Multimedia"    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media stop"; }
     Xf86audioprev  hotkey-overlay-title="Pista Anterior"        allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
     Xf86audionext  hotkey-overlay-title="Pista Siguiente"       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }

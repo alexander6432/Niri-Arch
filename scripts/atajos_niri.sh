@@ -9,7 +9,7 @@ awk '
     sym["Xf86audiomute"]         = "󰖁"
     sym["Xf86audionext"]         = "󰒬"
     sym["Xf86audiopause"]        = "󰐎"
-    sym["Xf86audioplay"]         = "󰐎"
+    sym["Xf86audioPlay"]         = "󰐎"
     sym["Xf86audioprev"]         = "󰒫"
     sym["Xf86audiostop"]         = "󰓛"
     sym["Xf86audiolowervolume"]  = "󰖀"
