@@ -91,6 +91,7 @@ binds {
     Mod+M       hotkey-overlay-title="Maximizar Ventana"            { maximize-column; }
     Mod+Shift+M hotkey-overlay-title="Pantalla Completa"            { fullscreen-window; }
     Mod+Ctrl+M  hotkey-overlay-title="Maximizar Ventana Totalmente" { maximize-window-to-edges; }
+    Mod+Shift+F hotkey-overlay-title="Pantalla Completa(Fake)"      { toggle-windowed-fullscreen; }
 
 // ========
 // floating
@@ -152,10 +153,10 @@ binds {
 recent-windows {
 
     binds {
-        Mod+Tab         hotkey-overlay-title="Siguiente Ventana General"   { next-window; }
-        Mod+Shift+Tab   hotkey-overlay-title="Anterior Ventana General"    { previous-window; }
-        Mod+U00BA       hotkey-overlay-title="Siguiente Ventana de la App" { next-window     filter="app-id"; }
-        Mod+Shift+U00BA hotkey-overlay-title="Anterior Ventana de la App"  { previous-window filter="app-id"; }
+        Super+Tab       hotkey-overlay-title="Siguiente Ventana General"         { next-window     scope="all"; }
+        Super+Shift+Tab hotkey-overlay-title="Anterior Ventana General"          { previous-window scope="all"; }
+        Alt+Tab         hotkey-overlay-title="Siguiente Ventana de la Misma App" { next-window     scope="all" filter="app-id"; }
+        Alt+Shift+Tab   hotkey-overlay-title="Anterior Ventana de la Misma App"  { previous-window scope="all" filter="app-id"; }
     }
 
 }

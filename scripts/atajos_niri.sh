@@ -21,13 +21,15 @@ awk '
     sym["Down"]                  = "󰚶"
     sym["Up"]                    = "󰚷"
     sym["Backspace"]             = "󰌍"
-    sym["Ctrl"]                  = "󰘴"
     sym["Minus"]                 = "-"
     sym["Mod"]                   = "󰖳"
+    sym["Super"]                 = "󰖳"
+    sym["Alt"]                   = "󰌎"
+    sym["Ctrl"]                  = "󰘴"
+    sym["Shift"]                 = "󰘲"
     sym["Plus"]                  = "+"
     sym["Print"]                 = "󰹑"
     sym["Return"]                = "󰌑"
-    sym["Shift"]                 = "󰘶"
     sym["Space"]                 = "󱁐"
     sym["Tab"]                   = "󰌒"
     sym["U00BA"]                 = "º"
@@ -44,7 +46,7 @@ awk '
     sym["F10"]                   = "󱊴"
     sym["F11"]                   = "󱊵"
     sym["F12"]                   = "󱊶"
-    sym["Home"]                  = "Inicio"
+    sym["Home"]                  = ""
     sym["Touchpadscrollleft"]    = "← Scroll"
     sym["Touchpadscrollright"]   = "→ Scroll"
     sym["Touchpadscrolldown"]    = "↓ Scroll"
@@ -71,13 +73,15 @@ awk '
     gsub(/\+/, " + ", keybind)
     gsub(/  +/, " ", keybind)
 
-    printf "%-40s %s\n", keybind, desc
+    printf "%-15s %s\n", keybind, desc
   }
 ' | \
 fzf \
+  --footer="Atajo           Descripción" \
   --prompt="󰍉 Buscar atajo: " \
+  --header-border=top \
   --height=80% \
   --border=rounded \
   --preview-window=hidden \
-  --header="$(printf ' Atajos de Niri  |  󰖳 = Super  󰘶 = Shift  󰘴 = Ctrl\n')" \
+  --header="$(printf ' Atajos de Niri:  󰖳 = Super | 󰘲 = Shift | 󰘴 = Ctrl | 󰌎 = Alt\n')" \
   --color='header:italic:yellow,prompt:cyan,pointer:magenta'
